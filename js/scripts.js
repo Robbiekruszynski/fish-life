@@ -7,12 +7,12 @@
 // });
 
 
-$(document).ready(function() {
-  $(".pages").hide()
-  $(".menu").click(function() {
-    $(".dropdown").animate({
-       height: "+=100px"
-    }, 200);
-    $(".pages").fadeToggle();
-  });
-});
+// $(document).ready(function() {
+//   $(".pages").hide()
+//   $(".menu").click(function() {
+//     $(".dropdown").animate({
+//        height: "+=100px"
+//     }, 100);
+//     $(".pages").fadeToggle();
+//   });
+// });

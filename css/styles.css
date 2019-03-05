@@ -1,6 +1,10 @@
 * {
   margin: 0;
-  border: 1px blue solid;
+  /* border: 1px blue solid; */
+}
+
+body {
+  background-color: blue;
 }
 
 nav {
@@ -11,14 +15,268 @@ nav {
 
 nav img {
   width: 80px;
-  margin: 10px 0 0 10px;
+  padding: 10px 10px 5px 10px;
 }
 
 .dropdown {
-  display: flex;
-  flex-direction: column;
+  display: none;
   height: 0px;
   width: 5px;
+  flex-direction: column;
   background-color: red;
-  transition: width 2s, height 2s;
+  transition: width 2s, height 1s;
+
+}
+
+img:hover + .dropdown {
+  display: flex;
+  flex-direction: column;
+  animation: drop 1s linear forwards;
+  /* animation: fadeIn 2s; */
+
+}
+
+.pages a {
+  display: flex;
+  opacity: 0;
+  animation: fadeIn 1s 1s linear forwards;
+
+}
+
+
+
+.dropdown:hover {
+  display: flex;
+  height: 100px;
+  width: 500px;
+}
+
+@keyframes drop {
+  0% {
+    height: 0px;
+    width: 5px;
+  }
+  25% {
+
+  }
+  50% {
+    height: 100px;
+    width: 5px;
+  }
+  75% {
+
+  }
+  100% {
+    height: 100px;
+    width: 500px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+h1 {
+  text-align: center;
+}
+
+span {
+  display: inline-block;
+  animation: text-change 1s linear;
+  /* animation: text-change 3s; */
+}
+
+.t {
+  animation: text-change 1s;
+  animation-iteration-count: infinite;
+}
+
+.e{
+    animation: text-change 1.3s;
+    animation-iteration-count: infinite;
+}
+
+.s {
+    animation: text-change 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.tt {
+    animation: text-change 1.7s;
+}
+@keyframes text-change {
+  0% {
+    transform:translateY(0px);
+  }
+  50%{
+    transform:translateY(10px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+.fish{
+animation: swim 5s;
+ animation-iteration-count: infinite;
+}
+.fish img {
+  width: 200px;
+}
+
+.fish-two {
+  animation: leftSwim 8s linear;
+   animation-iteration-count: infinite;
+   text-align: center;
+}
+@keyframes swim{
+  0%{
+    transform: translate(-1500px, -1500px)
+    }
+  100%{
+    transform: translate(3000px, 3000px)
+  }
+}
+@keyframes leftSwim{
+  0%{
+    transition: rotateX(1000deg)
+  }
+  100%{
+    transform: rotateX(-1500deg)
+  }
+}
+
+.floof {
+animation: floof 8s linear;
+animation-iteration-count: infinite;
+}
+
+.talk {
+  animation: loof 8s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes floof {
+  0%{
+    transform: translateX(1500px)
+  }
+  100%{
+    transform: translateX(-3000px)
+  }
+}
+
+@keyframes loof {
+  0%{
+    transform: translateX(-1500px)
+  }
+  100%{
+    transform: translateX(3000px)
+  }
+}
+
+.t-baby {
+  animation: tbaby 15s linear;
+  animation-iteration-count: infinite;
+}
+.t-baby1 {
+  animation: tbaby 10s linear;
+  animation-iteration-count: infinite;
+}
+.t-baby2 {
+  animation: tbaby 1s linear;
+  animation-iteration-count: infinite;
+}
+.t-baby3 {
+  animation: tbaby 50s linear;
+  animation-iteration-count: infinite;
+}
+.t-baby4 {
+  animation: tbaby 15s linear;
+  animation-iteration-count: infinite;
+}
+.t-baby5 {
+  animation: ttbaby 1s linear;
+  animation-iteration-count: infinite;
+}
+.t-baby6 {
+  animation: ttbaby 3s linear;
+  animation-iteration-count: infinite;
+}
+.t-baby7 {
+  animation: ttbaby 5s linear;
+  animation-iteration-count: infinite;
+}
+.t-baby8 {
+  animation: ttbaby 40s linear;
+  animation-iteration-count: infinite;
+}
+.t-baby9 {
+  animation: ttbaby 60s linear;
+  animation-iteration-count: infinite;
+}
+.t-baby10 {
+  animation: ttbaby 500s linear;
+  animation-iteration-count: infinite;
+}
+.snail {
+  animation: snail 15s linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.mind img{
+  width: 100vw;
+  height: 3400px;
+}
+.ocean {
+  font-size: 200px;
+  animation: ttbaby 500s linear;
+
+}
+.time {
+  font-size: 70px;
+  animation: ttbaby 5s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes snail {
+  from{
+    transform: translateY(-8000px);
+  }
+  to{
+    transform: translateY(3000px);
+  }
+}
+
+@keyframes tbaby{
+  0%{
+    transform:  rotate(0deg);
+  }
+
+
+
+  100%{
+    transform: rotate(360deg);
+  }
+
+}
+
+@keyframes ttbaby{
+  0%{
+    transform: rotate(0deg);
+  }
+
+
+
+  100%{
+    transform: rotate(-360deg);
+  }
+
+}
+
+@keyframes {
+
 }
